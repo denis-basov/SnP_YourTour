@@ -1,0 +1,76 @@
+@use "sass:map";
+@use "sass:color";
+
+@use 'reset';
+@use 'variables' as vars;
+@use 'texts';
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+html{
+  font-family: "Roboto", sans-serif;
+  color: map.get(vars.$colors, white);
+}
+
+body{
+    background-color: silver;
+}
+
+.container {
+    width: 100%;
+    max-width: 192rem;
+    margin: 0 auto;
+    background-color: aliceblue;
+  
+    @media (max-width: 480px) {
+      padding: 0 15px; // Меньшие отступы на мобильных
+    }
+}
+
+.header{
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/hero-image.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 83rem;
+
+  .header__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 116.8rem;
+    margin: 0 auto;
+    padding: 28.88px 0;
+
+    .header__nav{
+      .nav__list{
+        display: flex;
+        gap: 5rem;
+      }
+      
+    }
+  }
+
+  .header__hero{
+    padding: 11.85rem 0;
+    max-width: 76.8rem;
+    margin: 0 auto;
+    text-align: center;
+
+    .hero__title{
+      letter-spacing: 0.2rem;
+    }
+
+    .hero__subtitle{
+      max-width: 56.2rem;
+      letter-spacing: 0;
+      margin: 5rem auto 0;
+    } 
+
+    .hero__button{
+      padding: 5px 20px;
+      border-radius: 15px;
+      margin-top: 4.7rem;
+    }
+  }
+}
