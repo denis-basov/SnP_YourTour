@@ -23,6 +23,60 @@
             color: map.get(vars.$colors, "Orange 200");
         }
     }
+
+
+    .tours__grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+        margin-top: 10.6rem;
+
+        .tour-card{
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 5rem;
+            aspect-ratio: 370 / 531;
+            color: map.get(vars.$colors, "White");
+
+            &:nth-child(1) {
+                background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.06), rgba(0,0,0,0.5)), url('../images/desktop/tour-1.png');
+            }
+            &:nth-child(2) {
+                background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.06), rgba(0,0,0,0.5)), url('../images/desktop/tour-2.png');
+            }
+            &:nth-child(3) {
+                background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.06), rgba(0,0,0,0.5)), url('../images/desktop/tour-3.png');
+            }
+            &:nth-child(4) {
+                background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.06), rgba(0,0,0,0.5)), url('../images/desktop/tour-4.png');
+            }
+            &:nth-child(5) {
+                background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.06), rgba(0,0,0,0.5)), url('../images/desktop/tour-5.png');
+            }
+            &:nth-child(6) {
+                background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.06), rgba(0,0,0,0.5)), url('../images/desktop/tour-6.png');
+            }
+
+            .tour-card__overlay{
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                padding: 5rem;
+                gap: 1.6rem;
+
+                .tour-card__link{
+                    margin-top: auto;
+
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 1.6rem;
+                }
+            }
+
+
+        }
+    }
 }
 
 

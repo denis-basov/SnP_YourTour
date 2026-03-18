@@ -1,11 +1,12 @@
+@use 'sass:map';
 @use '../variables' as vars;
 
 .header {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/hero-image.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/desktop/hero-image.png') no-repeat;
   background-size: cover;
   background-position: center;
   max-height: 83rem;
-
+  color: map.get(vars.$colors, "White");
 }
 
 .header__top {
