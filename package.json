@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "sass:build": "sass SASS/main.scss styles/main.css --no-source-map",
+    "sass:watch": "sass SASS/main.scss styles/main.css --watch"
+  },
   "devDependencies": {
     "sass": "^1.92.1"
   }

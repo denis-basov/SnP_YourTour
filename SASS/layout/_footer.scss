@@ -1,0 +1,18 @@
+@use 'sass:map';
+@use '../variables' as vars;
+
+.footer {
+  background-color: map.get(vars.$colors, "Black");
+  color: map.get(vars.$colors, white);
+  padding: 6rem 15px;
+  margin-top: 10rem;
+
+  @media (max-width: 480px) {
+    padding: 3rem 15px;
+  }
+}
+
+.footer__content {
+  max-width: 192rem;
+  margin: 0 auto;
+}

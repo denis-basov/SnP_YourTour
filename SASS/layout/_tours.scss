@@ -1,0 +1,36 @@
+@use 'sass:map';
+@use '../variables' as vars;
+
+.tours .container{
+    padding: 13.5rem 37.5rem;
+    color: map.get(vars.$colors, "Black");
+
+    .tours__title {
+        text-align: center;
+        color: map.get(vars.$colors, "Black");
+    }
+
+    .tours__nav{
+        display: flex;
+        justify-content: center;
+        margin-top: 3.5rem;
+    }
+
+    .nav__list{
+        gap: 3rem;
+
+        .active{
+            color: map.get(vars.$colors, "Orange 200");
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
