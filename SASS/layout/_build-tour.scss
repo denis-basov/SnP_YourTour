@@ -1,0 +1,82 @@
+@use 'sass:map';
+@use '../variables' as vars;
+
+.build-tour {
+    
+    .container {
+        padding: 0 37.5rem;
+        background-color: map.get(vars.$colors, "Beige 100");
+
+        .build-tour__title {
+          text-align: center;
+          color: map.get(vars.$colors, "Black");
+        }
+
+        .build-tour__description {
+            text-align: center;
+            max-width: 40rem;
+            margin: 3rem auto 0 auto;
+            color: map.get(vars.$colors, "Gray 300");
+        }
+
+        .build-tour__form {
+            margin-top: 10rem;
+            padding: 7rem;
+            border-radius: 5rem;
+            background-color: map.get(vars.$colors, "White");
+
+            .form-grid{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 3rem;
+                    row-gap: 3.3rem;
+
+                .form-group {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+
+                    label {
+                        color: map.get(vars.$colors, "Black");
+                    }
+
+                    input {
+                        padding: 2rem;
+                        border-radius: 1rem;
+                        border: 1px solid map.get(vars.$colors, "Beige 200");
+                        background-color: map.get(vars.$colors, "Beige 100");
+                    }
+
+                    .direction{
+                        color: map.get(vars.$colors, "Gray 300");;
+                        background-color: map.get(vars.$colors, "Beige 100"); 
+                        border: 1px solid map.get(vars.$colors, "Beige 200");   
+                        border-radius: 1rem;  
+                        padding: 2rem;
+                        cursor: pointer;
+
+                        // иконка
+                        appearance: none;                        
+                        background-image: url('../images/icons/ic-dropdown.svg'); 
+                        background-repeat: no-repeat;
+                        background-position: right 2.1rem center;
+                        background-size: 2.6rem;
+                    }
+
+                    .direction:valid {
+                      color: #000;
+                    }
+
+
+                    input[type="date"] {
+                      color: map.get(vars.$colors, "Gray 300");
+                      text-transform: uppercase;
+                      letter-spacing: -0.8px;
+                    }
+                }
+            } 
+        }
+    }
+}
+
+

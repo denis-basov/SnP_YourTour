@@ -146,6 +146,84 @@
           </div>
         </section>
         <!-- </SECTION TOURS> -->
+
+        <!-- <SECTION BUILD-TOUR> -->
+        <section class="build-tour">
+          <div class="container">
+            <h2 class="build-tour__title h2">Собери свой тур</h2>
+            <p class="build-tour__description p-normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
+            
+            <form class="build-tour__form">
+
+              <div class="form-grid">
+
+                <div class="form-group">
+                  <label for="name" class="form-label p-normal">Имя</label>
+                  <input type="text" id="name" name="name" class="form-input p-normal" placeholder="Введите Ваше имя" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="direction" class="form-label p-normal">Направление</label>
+                  <select name="direction" id="direction" class="p-normal direction" required>
+                    <option value="">Куда хотите ехать</option>
+                    <option value="mountains">Горы</option>
+                    <option value="beach">Пляж</option>
+                    <option value="city">Город</option>
+                  </select>
+                </div>
+                
+                <div class="form-group">
+                  <label for="email" class="form-label p-normal">Email</label>
+                  <input type="email" id="email" name="email" class="form-input p-normal" placeholder="example@mail.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="phone" class="form-label p-normal">Телефон</label>
+                  <input type="tel" id="phone" name="phone" class="form-input p-normal" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="date_from" class="form-label p-normal">Дата от</label>
+                  <input type="date" id="date_from" name="date_from" class="form-input p-normal" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="date_to" class="form-label p-normal">Дата до</label>
+                  <input type="date" id="date_to" name="date_to" class="form-input p-normal" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="preferences" class="form-label p-normal">Комментарий</label>
+                  <textarea id="preferences" name="preferences" class="form-textarea p-normal" rows="4"></textarea>
+                </div>
+
+              </div>  
+
+              <div class="form-group">
+                <label>Вам есть 18 лет?</label>
+                <div class="radio-group">
+                  <label><input type="radio" name="age"> Да</label>
+                  <label><input type="radio" name="age"> Нет</label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>
+                  <input type="checkbox">
+                  Нажимая кнопку, я принимаю условия <span>Лицензионного договора</span>
+                </label>
+              </div>
+
+              <div class="form-group">
+                  <button type="submit" class="build-tour__button button p-small">Найти тур</button>
+                  <button type="reset" class="build-tour__button button p-small">Сбросить</button>
+              </div>
+              
+            </form>
+          </div>
+        </section>
+        <!-- </SECTION BUILD-TOUR> -->
+
       </main>
       <!-- </MAIN> -->
       <footer></footer>
