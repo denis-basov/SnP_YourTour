@@ -1,16 +1,17 @@
-@use 'variables' as vars;
+@use "variables" as vars;
 
 // Base styles
-@use 'base/reset';
-@use 'base/typography';
-@use 'base/common';
+@use "base/reset";
+@use "base/typography";
+@use "base/common";
 
 // Components
-@use 'components/button';
-@use 'components/nav';
+@use "components/button";
+@use "components/nav";
 
 // Layout
-@use 'layout/header';
-@use 'layout/tours';
-@use 'layout/build-tour';
-@use 'layout/footer';
+@use "layout/header";
+@use "layout/tours";
+@use "layout/build-tour";
+@use "layout/reviews";
+@use "layout/footer";
