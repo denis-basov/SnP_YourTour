@@ -7,14 +7,12 @@
     background-color: map.get(vars.$colors, "Beige 100");
 
     &__title {
-        // Стили заголовка
         text-align: center;
         max-width: 52.9rem;
         margin: 0 auto;
     }
 
     &__intro {
-        // Стили вступительного текста
         text-align: center;
         color: map.get(vars.$colors, "Gray 300");
         max-width: 40rem;
@@ -23,7 +21,6 @@
     }
 
     &__list {
-        // Стили контейнера списка (flex/grid и т.д.)
         margin-top: 10rem;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -41,38 +38,22 @@
     justify-content: space-between;
 
     &__text {
-        // Обёртка текста отзыва
         display: grid;
         row-gap: 2.7rem;
         margin-bottom: 7rem;
     }
 
-    &__text-item {
-        // Стили отдельных абзацев отзыва
-    }
-
     &__footer {
-        // Нижняя часть карточки (автор + аватар)
         display: flex;
         justify-content: space-between;
     }
 
     &__author {
-        // Блок с именем и названием тура
         display: grid;
         row-gap: 0.8rem;
     }
 
-    &__name {
-        // Имя клиента
-    }
-
     &__tour {
-        // Название тура
         color: map.get(vars.$colors, "Gray 300");
-    }
-
-    &__avatar {
-        // Фото клиента
     }
 }

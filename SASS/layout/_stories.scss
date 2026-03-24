@@ -6,14 +6,12 @@
   padding: 0 37.5rem;
 
   &__title {
-    // стили заголовка
     text-align: center;
     max-width: 72.3rem;
     margin: 0 auto;
   }
 
   &__intro {
-    // стили вступительного текста
     text-align: center;
     color: map.get(vars.$colors, "Gray 300");
     max-width: 40rem;
@@ -22,7 +20,6 @@
   }
 
   &__list {
-    // стили контейнера списка (вертикальный флекс или грид)
     margin-top: 10rem;
     display: grid;
     gap: 5rem;
@@ -39,44 +36,24 @@
     flex-direction: column;
     gap: 3.7rem;
 
-    &__title {
-      // стили заголовка истории
-    }
-
     &__text {
-      // стили текста истории
       max-width: 55.4rem;
     }
 
     &__features {
-      // стили маркированного списка
       margin-top: -1.2rem;
       margin-left: 3rem;
       list-style-type: disc;
     }
 
-    &__feature-item {
-      // стили элементов списка
-    }
-
     &__more-link {
-      // стили ссылки "Подробнее"
       display: flex;
       gap: 1.5rem;
     }
 
-    &__arrow {
-      // стили стрелки
-    }
-
     &__socials {
-      // стили контейнера соцсетей (flex, gap)
       display: flex;
       gap: 3.5rem;
-    }
-
-    &__social-link {
-      // стили каждой ссылки соцсети
     }
 
     &__footer {
@@ -88,16 +65,16 @@
 
   .story:nth-child(1) {
     background:
-      linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.02)), url("/images/desktop/story-image-1.png");
+      linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.02)), url("../images/desktop/story-image-1.png");
   }
 
   .story:nth-child(2) {
     background:
-      linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.02)), url("/images/desktop/story-image-2.png");
+      linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.02)), url("../images/desktop/story-image-2.png");
   }
 
   .story:nth-child(3) {
     background:
-      linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.02)), url("/images/desktop/story-image-3.png");
+      linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.02)), url("../images/desktop/story-image-3.png");
   }
 }

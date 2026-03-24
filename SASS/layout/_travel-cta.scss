@@ -9,22 +9,15 @@
   align-items: center;
 
   &__content {
-    // стили для блока с текстом
     display: grid;
     gap: 2rem;
   }
 
-  &__title {
-    // стили заголовка
-  }
-
   &__text {
-    // стили параграфа
     color: map.get(vars.$colors, "Gray 300");
   }
 
   &__email-link {
-    // стили ссылки на почту
     color: map.get(vars.$colors, "Black");
   }
 }

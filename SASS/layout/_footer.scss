@@ -1,18 +1,26 @@
-@use 'sass:map';
-@use '../variables' as vars;
+@use "sass:map";
+@use "../variables" as vars;
 
 .footer {
-  background-color: map.get(vars.$colors, "Black");
-  color: map.get(vars.$colors, white);
-  padding: 6rem 15px;
-  margin-top: 10rem;
-
-  @media (max-width: 480px) {
-    padding: 3rem 15px;
-  }
-}
-
-.footer__content {
+  background-color: map.get(vars.$colors, "Beige 200");
+  display: grid;
+  justify-content: center;
+  grid-template-columns: minmax(0, 22.2rem) minmax(0, 40.8rem);
+  gap: 53.8rem;
   max-width: 192rem;
-  margin: 0 auto;
+  padding: 3rem 0;
+
+  &__text {
+    color: map.get(vars.$colors, "Gray 300");
+  }
+
+  &__socials {
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  &__social-link {
+    display: flex;
+    gap: 0.8rem;
+  }
 }

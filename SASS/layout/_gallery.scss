@@ -5,14 +5,12 @@
   margin-top: 13.5rem;
 
   &__title {
-    // Стили заголовка
     text-align: center;
     max-width: 72.3rem;
     margin: 0 auto;
   }
 
   &__intro {
-    // Стили вступительного текста
     text-align: center;
     color: map.get(vars.$colors, "Gray 300");
     max-width: 40rem;
@@ -21,7 +19,6 @@
   }
 
   &__list {
-    // Стили контейнера галереи (grid / flex, отступы)
     display: grid;
     grid-template-columns: repeat(20, 1fr);
     gap: 3rem;
