@@ -1,9 +1,9 @@
 @use "sass:map";
 @use "../variables" as vars;
 
-.tours .container {
-  max-width: 117rem; // ограничиваем максимальную ширину
-  margin: 0 auto; // центрируем
+.tours {
+  max-width: 117rem;
+  margin: 0 auto;
 
   padding: 13.5rem 0;
   color: map.get(vars.$colors, "Black");

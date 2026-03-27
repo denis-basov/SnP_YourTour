@@ -2,7 +2,8 @@
 @use "../variables" as vars;
 
 .reviews {
-    padding: 0 37.5rem;
+    max-width: 117rem;
+    margin: 0 auto;
     margin-top: 13.5rem;
     background-color: map.get(vars.$colors, "Beige 100");
 

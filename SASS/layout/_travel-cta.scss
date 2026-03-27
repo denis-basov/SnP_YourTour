@@ -2,7 +2,10 @@
 @use "../variables" as vars;
 
 .travel-cta {
-  padding: 13.5rem 57.45rem;
+  max-width: 77.1rem;
+  margin: 0 auto;
+
+  padding: 13.5rem 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;

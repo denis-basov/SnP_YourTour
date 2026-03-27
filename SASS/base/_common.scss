@@ -1,5 +1,5 @@
-@use 'sass:map';
-@use '../variables' as vars;
+@use "sass:map";
+@use "../variables" as vars;
 
 html {
   font-family: "Roboto", sans-serif;
@@ -10,12 +10,13 @@ body {
   background-color: silver;
 }
 
-main{
-    background-color: map.get(vars.$colors, "Beige 100");
+main {
+  background-color: map.get(vars.$colors, "Beige 100");
 }
 
 .container {
   width: 100%;
   max-width: 192rem;
   margin: 0 auto;
+  background-color: map.get(vars.$colors, "Beige 200");
 }

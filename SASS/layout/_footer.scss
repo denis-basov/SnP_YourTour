@@ -2,13 +2,13 @@
 @use "../variables" as vars;
 
 .footer {
-  background-color: map.get(vars.$colors, "Beige 200");
-  display: grid;
-  justify-content: center;
-  grid-template-columns: minmax(0, 22.2rem) minmax(0, 40.8rem);
-  gap: 53.8rem;
-  max-width: 192rem;
+  max-width: 116.6rem;
+  margin: 0 auto;
   padding: 3rem 0;
+
+  background-color: map.get(vars.$colors, "Beige 200");
+  display: flex;
+  justify-content: space-between;
 
   &__text {
     color: map.get(vars.$colors, "Gray 300");
@@ -16,11 +16,11 @@
 
   &__socials {
     display: flex;
-    gap: 2.5rem;
+    gap: 2.6rem;
   }
 
   &__social-link {
     display: flex;
-    gap: 0.8rem;
+    gap: 1rem;
   }
 }

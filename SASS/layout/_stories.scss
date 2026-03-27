@@ -2,8 +2,9 @@
 @use "../variables" as vars;
 
 .stories {
+  max-width: 117rem;
+  margin: 0 auto;
   margin-top: 13.5rem;
-  padding: 0 37.5rem;
 
   &__title {
     text-align: center;
