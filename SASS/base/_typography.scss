@@ -1,83 +1,83 @@
 .h1 {
   font-size: 9.6rem;
   font-weight: 700;
-  line-height: 109.00000000000001%;
+  line-height: round(109.00000000000001%, 1px);
   letter-spacing: 2%;
 }
 
 .h2 {
   font-size: 5.9rem;
   font-weight: 700;
-  line-height: 124%;
+  line-height: round(124%, 1px);
   letter-spacing: 0%;
 }
 
 .h3 {
   font-size: 3.5rem;
   font-weight: 500;
-  line-height: 122%;
+  line-height: round(122%, 1px);
   letter-spacing: 0%;
 }
 
 .p-big {
   font-size: 2.3rem;
   font-weight: 700;
-  line-height: 122%;
+  line-height: round(122%, 1px);
   letter-spacing: 0%;
 }
 
 .p-normal {
   font-size: 2rem;
   font-weight: 400;
-  line-height: 142%;
+  line-height: round(142%, 1px);
   letter-spacing: 0%;
 }
 
 .p-small {
   font-size: 1.7rem;
   font-weight: 400;
-  line-height: 142%;
+  line-height: round(142%, 1px);
   letter-spacing: -1%;
 }
 
 .m-h1 {
   font-size: 3.4rem;
   font-weight: 700;
-  line-height: 112.00000000000001%;
+  line-height: round(112.00000000000001%, 1px);
   letter-spacing: 2%;
 }
 
 .m-h2 {
   font-size: 3.4rem;
   font-weight: 700;
-  line-height: 112.00000000000001%;
+  line-height: round(112.00000000000001%, 1px);
   letter-spacing: 2%;
 }
 
 .m-h3 {
   font-size: 2.3rem;
   font-weight: 700;
-  line-height: 120%;
+  line-height: round(120%, 1px);
   letter-spacing: 4%;
 }
 
 .m-p-big {
   font-size: 1.6rem;
   font-weight: 700;
-  line-height: 142%;
+  line-height: round(142%, 1px);
   letter-spacing: 0%;
 }
 
 .m-p-normal {
   font-size: 1.6rem;
   font-weight: 400;
-  line-height: 142%;
+  line-height: round(142%, 1px);
   letter-spacing: 0%;
 }
 
 .m-p-small {
   font-size: 1.6rem;
   font-weight: 400;
-  line-height: 142%;
+  line-height: round(142%, 1px);
   letter-spacing: -1%;
 }

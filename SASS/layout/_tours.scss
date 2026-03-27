@@ -2,7 +2,10 @@
 @use "../variables" as vars;
 
 .tours .container {
-  padding: 13.5rem 37.5rem;
+  max-width: 117rem; // ограничиваем максимальную ширину
+  margin: 0 auto; // центрируем
+
+  padding: 13.5rem 0;
   color: map.get(vars.$colors, "Black");
 
   .tours__title {

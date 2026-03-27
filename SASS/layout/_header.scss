@@ -18,7 +18,7 @@
   width: 100%;
   max-width: 116.8rem;
   margin: 0 auto;
-  padding: 28.88px 0;
+  padding: 2.8rem 0;
 }
 
 .header__logo {
@@ -46,7 +46,7 @@
 }
 
 .header__hero {
-  padding: 11.85rem 0;
+  padding: 11.75rem 0;
   max-width: 76.8rem;
   margin: 0 auto;
   text-align: center;
@@ -59,7 +59,7 @@
 }
 
 .hero__title {
-  letter-spacing: 0.2rem;
+  padding-left: 3px;
 }
 
 .hero__subtitle {
@@ -70,5 +70,8 @@
 }
 
 .hero__button {
-  margin-top: 4.7rem;
+  margin-top: 5rem;
+  padding: 5px 20px;
+  border: 0;
+  border-radius: 10px;
 }
