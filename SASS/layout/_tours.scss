@@ -4,13 +4,15 @@
 .tours {
   max-width: 117rem;
   margin: 0 auto;
+  padding-top: 13.3rem;
 
-  padding: 13.5rem 0;
+  // padding: 13.5rem 0;
   color: map.get(vars.$colors, "Black");
 
   .tours__title {
     text-align: center;
     color: map.get(vars.$colors, "Black");
+    margin-top: 2px;
   }
 
   .tours__nav {
