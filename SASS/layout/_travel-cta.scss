@@ -22,5 +22,24 @@
 
   &__email-link {
     color: map.get(vars.$colors, "Black");
+    text-decoration: none; // remove default underline
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: map.get(vars.$colors, "Black");
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
   }
 }

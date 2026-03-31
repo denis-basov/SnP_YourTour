@@ -58,3 +58,19 @@
         color: map.get(vars.$colors, "Gray 300");
     }
 }
+
+@media (max-width: 1024px) {
+    .reviews {
+        max-width: 91.8rem;
+
+        &__list {
+            gap: 1.8rem;
+        }
+    }
+
+    .review {
+        &__text {
+            row-gap: 2.8rem;
+        }
+    }
+}

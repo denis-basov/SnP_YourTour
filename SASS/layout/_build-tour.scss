@@ -145,3 +145,25 @@
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .build-tour {
+    max-width: 91.8rem;
+
+    .build-tour__form {
+      padding: 6rem;
+
+      .form-grid {
+        column-gap: 2rem;
+
+        .form-group .textarea {
+          margin-top: -2px;
+        }
+
+        .checkbox-group {
+          gap: 1.7rem;
+        }
+      }
+    }
+  }
+}
