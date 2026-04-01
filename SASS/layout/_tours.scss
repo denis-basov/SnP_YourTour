@@ -110,6 +110,10 @@
       .tour-card {
         aspect-ratio: 450 / 531;
 
+        &__break {
+          display: none;
+        }
+
         &:nth-child(1) {
           background-image:
             linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)),
