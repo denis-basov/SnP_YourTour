@@ -134,10 +134,25 @@
     .story {
       padding: 2rem;
       border-radius: 2rem;
-      aspect-ratio: none;
-      display: flex;
-      flex-direction: column;
       gap: 2rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .stories {
+    .stories__title {
+      font-size: 4rem;
+    }
+
+    .stories__list .story {
+      aspect-ratio: auto;
+
+      .story__footer {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 1rem;
+      }
     }
   }
 }

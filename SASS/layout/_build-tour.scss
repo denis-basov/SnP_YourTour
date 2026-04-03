@@ -180,3 +180,26 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .build-tour {
+    .build-tour__title {
+      font-size: 4rem;
+    }
+
+    .build-tour__form .form-grid {
+      grid-template-columns: 1fr !important;
+
+      :nth-child(7),
+      :nth-child(8),
+      :nth-child(9),
+      :nth-child(10) {
+        grid-column: span 1;
+      }
+
+      .form-group.button-group .build-tour__button {
+        padding: 2rem 4rem;
+      }
+    }
+  }
+}

@@ -43,3 +43,14 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .travel-cta {
+    grid-template-columns: 1fr;
+    justify-items: center;
+
+    .travel-cta__image {
+      max-width: 70%;
+    }
+  }
+}

@@ -179,3 +179,26 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .tours {
+    .tours__title {
+      font-size: 4rem;
+    }
+
+    .tours__grid {
+      grid-template-columns: 1fr;
+      padding: 0 2rem;
+
+      .tour-card {
+        aspect-ratio: 3/2.5;
+        background-size: cover;
+        background-position: center bottom;
+
+        .tour-card__title {
+          font-size: 3.6rem;
+        }
+      }
+    }
+  }
+}
