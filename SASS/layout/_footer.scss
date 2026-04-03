@@ -30,3 +30,11 @@
     max-width: 91.5rem;
   }
 }
+
+@media (max-width: 800px) {
+  .footer {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}

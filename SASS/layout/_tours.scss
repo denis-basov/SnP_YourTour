@@ -5,8 +5,6 @@
   max-width: 117rem;
   margin: 0 auto;
   padding-top: 13.3rem;
-
-  // padding: 13.5rem 0;
   color: map.get(vars.$colors, "Black");
 
   .tours__title {
@@ -148,6 +146,34 @@
           background-image:
             linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)),
             url("../images/laptop/tour-6.png");
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .tours {
+    padding-top: 7rem;
+
+    .tours__nav {
+      flex-wrap: wrap;
+
+      .nav__list {
+        justify-content: center;
+      }
+    }
+
+    .tours__grid {
+      // grid-template-columns: 1fr;
+      max-width: 70rem;
+      margin: 7rem auto 0;
+
+      .tour-card {
+        aspect-ratio: 300 / 354;
+
+        .tour-card__title {
+          font-size: 2.6rem;
         }
       }
     }

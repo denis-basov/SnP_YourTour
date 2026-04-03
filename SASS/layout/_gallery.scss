@@ -172,3 +172,13 @@
     }
   }
 }
+
+@media (max-width: 800px) {
+  .gallery {
+    margin-top: 7rem;
+
+    &__list {
+      margin-top: 5rem;
+    }
+  }
+}

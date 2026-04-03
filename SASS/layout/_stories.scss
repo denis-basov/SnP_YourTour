@@ -120,3 +120,24 @@
     }
   }
 }
+
+@media (max-width: 800px) {
+  .stories {
+    margin-top: 7rem;
+
+    &__list {
+      margin-top: 5rem;
+      gap: 2rem;
+      padding: 1rem;
+    }
+
+    .story {
+      padding: 2rem;
+      border-radius: 2rem;
+      aspect-ratio: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+}

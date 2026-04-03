@@ -167,3 +167,16 @@
     }
   }
 }
+
+@media (max-width: 800px) {
+  .build-tour {
+    max-width: 70rem;
+    padding-top: 7rem;
+
+    .build-tour__form {
+      margin-top: 5rem;
+      padding: 3rem;
+      border-radius: 3rem;
+    }
+  }
+}

@@ -3,6 +3,7 @@
 
 .nav__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 5rem;
   list-style: none;
   padding: 0;
