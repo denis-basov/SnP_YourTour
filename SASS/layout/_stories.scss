@@ -156,3 +156,39 @@
     }
   }
 }
+
+@media (max-width: 360px) {
+  .stories {
+    .stories__title {
+      font-size: 3.4rem;
+    }
+
+    .stories__intro {
+      font-size: 1.6rem;
+    }
+
+    .stories__list .story {
+      aspect-ratio: 318/455;
+
+      .story__title {
+        font-size: 2.3rem;
+      }
+
+      .story__text,
+      .story__features,
+      .story__footer {
+        font-size: 1.6rem;
+      }
+
+      .story__footer {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 1rem;
+
+        .story__socials {
+          display: none;
+        }
+      }
+    }
+  }
+}

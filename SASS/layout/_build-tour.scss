@@ -188,7 +188,7 @@
     }
 
     .build-tour__form .form-grid {
-      grid-template-columns: 1fr !important;
+      grid-template-columns: 1fr;
 
       :nth-child(7),
       :nth-child(8),
@@ -199,6 +199,26 @@
 
       .form-group.button-group .build-tour__button {
         padding: 2rem 4rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .build-tour {
+    .build-tour__title {
+      font-size: 3.4rem;
+    }
+
+    .build-tour__description {
+      font-size: 1.6rem;
+    }
+
+    .build-tour__form{
+      .form-grid{
+      .form-group.button-group .build-tour__button {
+        padding: 1rem 2rem;
+      }
       }
     }
   }

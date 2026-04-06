@@ -113,7 +113,30 @@
 }
 
 @media (max-width: 600px) {
-  .header .header__hero .hero__title{
+  .header .header__hero .hero__title {
     font-size: 6rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .header .header__top {
+    max-width: 32rem;
+    align-items: center;
+
+    .header__logo {
+      width: 133px;
+    }
+
+    .header__contact {
+      font-size: 1.6rem;
+      line-height: 142%;
+    }
+  }
+
+  .header .header__hero {
+    .hero__title {
+      font-size: 3.4rem;
+      line-height: 112%;
+    }
   }
 }

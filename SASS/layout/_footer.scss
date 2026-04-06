@@ -38,3 +38,11 @@
     gap: 1rem;
   }
 }
+
+@media (max-width: 360px) {
+  .footer {
+    .footer__socials {
+      font-size: 1.6rem;
+    }
+  }
+}
