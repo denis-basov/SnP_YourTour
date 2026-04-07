@@ -202,3 +202,54 @@
     }
   }
 }
+
+@media (max-width: 360px) {
+  .tours {
+    padding-top: 7.4rem;
+
+    .tours__title {
+      font-size: 3.4rem;
+      letter-spacing: 2%;
+      line-height: round(112%, 1px);
+    }
+
+    .tours__nav {
+      margin-top: 3.2rem;
+
+      .nav__list {
+        max-width: 30rem;
+        font-size: 1.6rem;
+        gap: 1.1rem;
+      }
+    }
+
+    .tours__grid {
+      margin-top: 5.2rem;
+      padding: 0;
+      max-width: 31.8rem;
+
+      .tour-card {
+        border-radius: 2rem;
+        aspect-ratio: 1;
+
+        .tour-card__overlay {
+          padding: 2.5rem;
+          gap: 1.2rem;
+
+          .tour-card__title {
+            font-size: 2.3rem;
+            letter-spacing: 4.4%;
+          }
+
+          .tour-card__price {
+            letter-spacing: -4%;
+          }
+
+          .tour-card__link {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+}

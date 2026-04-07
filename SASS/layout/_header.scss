@@ -121,22 +121,39 @@
 @media (max-width: 360px) {
   .header .header__top {
     max-width: 32rem;
-    align-items: center;
+    justify-content: space-between;
+    padding: 3.25rem 0;
 
     .header__logo {
-      width: 133px;
+      width: 13.3rem;
     }
 
     .header__contact {
       font-size: 1.6rem;
-      line-height: 142%;
     }
   }
 
   .header .header__hero {
+    padding: 5.2rem 0;
+
     .hero__title {
       font-size: 3.4rem;
-      line-height: 112%;
+      line-height: round(112%, 1px);
+    }
+
+    .hero__subtitle {
+      max-width: 31rem;
+      font-size: 1.6rem;
+      margin: 4rem auto 0;
+
+      .hero__comma {
+        display: inline;
+      }
+    }
+
+    .hero__button {
+      margin-top: 4rem;
+      font-size: 1.6rem;
     }
   }
 }
