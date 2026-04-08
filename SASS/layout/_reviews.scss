@@ -107,3 +107,57 @@
     }
   }
 }
+
+@media (max-width: 360px) {
+  .reviews {
+    margin-top: 7.6rem;
+    max-width: 31.8rem;
+
+    .reviews__title {
+      font-size: 3.4rem;
+      line-height: round(112%, 1px);
+      letter-spacing: 2%;
+    }
+
+    .reviews__intro {
+      margin-top: 1.9rem;
+      font-size: 1.6rem;
+      line-height: round(142%, 1px);
+      letter-spacing: 0%;
+    }
+
+    .reviews__list {
+      grid-template-columns: 1fr;
+      padding: 0;
+
+      .review {
+        padding: 2rem;
+        border-radius: 2rem;
+
+        .review__text {
+          font-size: 1.6rem;
+          line-height: round(142%, 1px);
+          letter-spacing: 0%;
+          margin-bottom: 4rem;
+          row-gap: 2.3rem;
+        }
+
+        .review__footer {
+          .review__author {
+            gap: 0.7rem;
+            align-self: flex-end;
+
+            .review__name {
+              font-size: 2.3rem;
+              letter-spacing: 4%;
+            }
+
+            .review__tour {
+              font-size: 1.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

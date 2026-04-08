@@ -232,6 +232,42 @@
         border-radius: 2rem;
         aspect-ratio: 1;
 
+        &:nth-child(1) {
+          background-image:
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)),
+            url("../images/mobile/tour-1.png");
+        }
+
+        &:nth-child(2) {
+          background-image:
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)),
+            url("../images/mobile/tour-2.png");
+        }
+
+        &:nth-child(3) {
+          background-image:
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)),
+            url("../images/mobile/tour-3.png");
+        }
+
+        &:nth-child(4) {
+          background-image:
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)),
+            url("../images/mobile/tour-4.png");
+        }
+
+        &:nth-child(5) {
+          background-image:
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)),
+            url("../images/mobile/tour-5.png");
+        }
+
+        &:nth-child(6) {
+          background-image:
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)),
+            url("../images/mobile/tour-6.png");
+        }
+
         .tour-card__overlay {
           padding: 2.5rem;
           gap: 1.2rem;
