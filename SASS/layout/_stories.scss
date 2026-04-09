@@ -159,35 +159,93 @@
 
 @media (max-width: 360px) {
   .stories {
+    max-width: 31.8rem;
+    margin-top: 7.6rem;
+
     .stories__title {
       font-size: 3.4rem;
+      letter-spacing: 2%;
+      line-height: round(112%, 1px);
     }
 
     .stories__intro {
       font-size: 1.6rem;
+      margin-top: 1.9rem;
     }
 
-    .stories__list .story {
-      aspect-ratio: 318/455;
+    .stories__list {
+      margin-top: 5rem;
+      padding: 0;
 
-      .story__title {
-        font-size: 2.3rem;
-      }
+      .story {
+        aspect-ratio: 318/455;
+        padding: 3rem;
 
-      .story__text,
-      .story__features,
-      .story__footer {
-        font-size: 1.6rem;
-      }
+        .story__title {
+          font-size: 2.3rem;
+          line-height: round(120%, 1px);
+          letter-spacing: 4%;
 
-      .story__footer {
-        flex-wrap: wrap;
-        justify-content: space-around;
-        gap: 1rem;
-
-        .story__socials {
-          display: none;
+          span.new-line {
+            display: block;
+          }
         }
+
+        .story__text,
+        .story__features,
+        .story__footer {
+          font-size: 1.6rem;
+        }
+
+        .story__feature-item::before {
+          font-size: 1.5rem;
+          left: 9.8px;
+          top: 0;
+        }
+
+        .story__features {
+          margin-top: 0.4rem;
+          display: grid;
+          row-gap: 0.1rem;
+
+          .story__feature-item {
+            padding-left: 2.4rem;
+          }
+        }
+
+        .story__footer {
+          justify-content: flex-start;
+
+          .story__more-link {
+            font-size: 1.6rem;
+            line-height: round(155%, 1px);
+          }
+
+          .story__socials {
+            display: none;
+          }
+        }
+      }
+
+      .story:nth-child(1) {
+        background:
+          linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.02)), url("../images/mobile/story-image-1.png");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .story:nth-child(2) {
+        background:
+          linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.02)), url("../images/mobile/story-image-2.png");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .story:nth-child(3) {
+        background:
+          linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.02)), url("../images/mobile/story-image-3.png");
+        background-size: cover;
+        background-position: center;
       }
     }
   }

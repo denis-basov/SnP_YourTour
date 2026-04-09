@@ -54,3 +54,41 @@
     }
   }
 }
+
+@media (max-width: 360px) {
+  .travel-cta {
+    margin-top: 7.5rem;
+    padding-top: 0;
+    padding-bottom: 7.5rem;
+
+    .travel-cta__image {
+      max-width: 13rem;
+      height: 13.3rem;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    .travel-cta__content {
+      max-width: 29.1rem;
+      margin: 0 auto;
+      text-align: center;
+      gap: 2.1rem;
+
+      .travel-cta__title {
+        font-size: 2.3rem;
+        line-height: round(120%, 1px);
+        letter-spacing: 4%;
+
+        max-width: 29.1rem;
+      }
+
+      .travel-cta__text {
+        font-size: 1.6rem;
+        line-height: 142%;
+        letter-spacing: 0%;
+      }
+    }
+  }
+}
