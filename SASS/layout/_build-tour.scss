@@ -136,10 +136,13 @@
           border-radius: 1rem;
           padding: 1.5rem 7.05rem;
           font-weight: 400;
+          background-color: map.get(vars.$colors, "Green 400");
         }
 
         button:last-child {
           padding: 1.5rem 7.35rem;
+          background-color: map.get(vars.$colors, "Green 100");
+          color: map.get(vars.$colors, "Green 400");
         }
       }
     }
@@ -292,6 +295,7 @@
             padding: 1.2rem 2.95rem;
             font-size: 1.6rem;
           }
+
           button[type="reset"] {
             padding: 1.2rem 3.1rem;
           }

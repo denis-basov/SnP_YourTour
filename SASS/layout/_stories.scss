@@ -37,6 +37,8 @@
     flex-direction: column;
     gap: 3.7rem;
 
+    transition: transform 0.3s ease;
+
     &__text {
       max-width: 55.4rem;
     }
@@ -61,6 +63,29 @@
     &__more-link {
       display: flex;
       gap: 1.5rem;
+      position: relative;
+      z-index: 0;
+      background: transparent;
+      transition: all 0.3s ease;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -7px;
+        left: -20px;
+        right: -20px;
+        bottom: -7px;
+        background: map.get(vars.$colors, "Green 400");
+        border-radius: 5rem;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      &:hover::before {
+        opacity: 1;
+      }
     }
 
     &__socials {
@@ -73,6 +98,10 @@
       display: flex;
       justify-content: space-between;
     }
+  }
+
+  .story:hover {
+    transform: scale(1.2);
   }
 
   .story:nth-child(1) {

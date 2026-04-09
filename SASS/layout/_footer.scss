@@ -22,6 +22,26 @@
   &__social-link {
     display: flex;
     gap: 1rem;
+
+    .footer__social-text {
+      position: relative;
+    }
+
+    .footer__social-text::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: map.get(vars.$colors, "Black");
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .footer__social-text:hover::after {
+      opacity: 1;
+    }
   }
 }
 

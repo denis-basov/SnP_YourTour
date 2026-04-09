@@ -22,8 +22,34 @@
   .nav__list {
     gap: 3rem;
 
-    .active {
-      color: map.get(vars.$colors, "Orange 200");
+    .nav__item {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: currentColor;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+        transform-origin: left;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+      }
+
+      &.active {
+        color: map.get(vars.$colors, "Orange 200");
+
+        &::after {
+          background-color: map.get(vars.$colors, "Orange 200");
+          transform: scaleX(1);
+        }
+      }
     }
   }
 
@@ -40,6 +66,8 @@
       border-radius: 5rem;
       aspect-ratio: 370 / 531;
       color: map.get(vars.$colors, "White");
+
+      transition: transform 0.3s ease;
 
       &:nth-child(1) {
         background-image:
@@ -84,8 +112,33 @@
           display: inline-flex;
           align-items: center;
           gap: 1.6rem;
+
+          position: relative;
+        }
+
+        .tour-card__link::before {
+          content: "";
+          position: absolute;
+          top: -7px;
+          left: -20px;
+          right: 90px;
+          bottom: -7px;
+          background: map.get(vars.$colors, "Green 400");
+          border-radius: 5rem;
+          z-index: -1;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          pointer-events: none;
+        }
+
+        .tour-card__link:hover::before {
+          opacity: 1;
         }
       }
+    }
+
+    .tour-card:hover {
+      transform: scale(1.2);
     }
   }
 }
