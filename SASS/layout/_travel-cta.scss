@@ -41,6 +41,14 @@
     &:hover::after {
       opacity: 1;
     }
+
+    &:active {
+      color: map.get(vars.$colors, "Green 400");
+      &::after {
+        background-color: map.get(vars.$colors, "Green 400");
+        opacity: 1;
+      }
+    }
   }
 }
 

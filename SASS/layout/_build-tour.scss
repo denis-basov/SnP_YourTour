@@ -53,10 +53,24 @@
           border-radius: 1rem;
           border: 1px solid map.get(vars.$colors, "Beige 200");
           background-color: map.get(vars.$colors, "Beige 100");
+          color: map.get(vars.$colors, "Black");
+          cursor: pointer;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+          border-color: map.get(vars.$colors, "Gray 300");
+          outline: none;
         }
 
         .textarea {
           margin-top: -1px;
+        }
+
+        .form-textarea {
+          cursor: pointer;
+          color: map.get(vars.$colors, "Black");
         }
 
         .direction {
@@ -117,13 +131,76 @@
 
       .checkbox-group {
         flex-direction: row;
-        gap: 2.5rem;
+        gap: 2rem;
         padding-top: 0.2rem;
 
+        label {
+          cursor: pointer;
+          user-select: none;
+
+          .license-link {
+            color: map.get(vars.$colors, "Black");
+            text-decoration: none;
+            position: relative;
+            display: inline-block;
+            transition: color 0.3s ease;
+
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: -2px;
+              left: 0;
+              width: 100%;
+              height: 1px;
+              background-color: map.get(vars.$colors, "Black");
+              opacity: 0;
+              transition:
+                opacity 0.3s ease,
+                background-color 0.3s ease;
+            }
+
+            &:hover::after {
+              opacity: 1;
+            }
+
+            &:active {
+              color: map.get(vars.$colors, "Green 400");
+              &::after {
+                background-color: map.get(vars.$colors, "Green 400");
+                opacity: 1;
+              }
+            }
+          }
+        }
+
         input[type="checkbox"] {
-          transform: scale(2);
           order: -1;
-          margin-left: 0.7rem;
+
+          appearance: none;
+          -webkit-appearance: none;
+          width: 26px;
+          height: 25px;
+          padding: 0;
+          background: white;
+          border: 1px solid black;
+          border-radius: 4px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          flex-shrink: 0;
+
+          &:checked::after {
+            content: "";
+            width: 8px;
+            height: 14px;
+            border: solid black;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+            display: block;
+            margin-top: -2px;
+            padding: 0;
+          }
         }
       }
 
@@ -139,10 +216,25 @@
           background-color: map.get(vars.$colors, "Green 400");
         }
 
+        .build-tour__button:hover {
+          background-color: map.get(vars.$colors, "Green 300");
+        }
+        .build-tour__button:active {
+          background-color: map.get(vars.$colors, "Green 200");
+        }
+
         button:last-child {
           padding: 1.5rem 7.35rem;
           background-color: map.get(vars.$colors, "Green 100");
           color: map.get(vars.$colors, "Green 400");
+        }
+
+        button:last-child:hover {
+          background-color: map.get(vars.$colors, "Gray 100");
+        }
+
+        button:last-child:active {
+          background-color: map.get(vars.$colors, "Gray 200");
         }
       }
     }

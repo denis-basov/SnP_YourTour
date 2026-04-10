@@ -134,6 +134,11 @@
         .tour-card__link:hover::before {
           opacity: 1;
         }
+
+        .tour-card__link:active::before {
+          background: map.get(vars.$colors, "Orange 200");
+          opacity: 1;
+        }
       }
     }
 

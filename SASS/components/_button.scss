@@ -1,5 +1,5 @@
-@use 'sass:map';
-@use '../variables' as vars;
+@use "sass:map";
+@use "../variables" as vars;
 
 .button {
   padding: 1rem 2.5rem;
@@ -10,14 +10,4 @@
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: 700;
-
-  &:hover {
-    opacity: 0.9;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(239, 165, 1, 0.3);
-  }
-
-  &:active {
-    transform: translateY(0);
-  }
 }
