@@ -42,7 +42,7 @@
 }
 
 .header__phone {
-  color: white;
+  color: map.get(vars.$colors, "White");
 }
 
 .header__hero {
@@ -74,6 +74,15 @@
   padding: 5px 20px;
   border: 0;
   border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.hero__button:hover {
+  background-color: map.get(vars.$colors, "Orange 200");
+}
+
+.hero__button:active {
+  background-color: map.get(vars.$colors, "Orange 100");
 }
 
 @media (max-width: 1024px) {
