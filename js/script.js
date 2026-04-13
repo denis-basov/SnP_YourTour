@@ -1,12 +1,12 @@
-(function() {
+import IMask from 'imask';
 
-  document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
 
-    // только кириллица в имени  
+    // только кириллица в имени
     const nameField = document.getElementById('name');
     if (nameField) {
         nameField.addEventListener('input', function() {
-        this.value = this.value.replace(/[^А-Яа-яЁё\s-]/g, '');
+            this.value = this.value.replace(/[^А-Яа-яЁё\s-]/g, '');
         });
     }
 
@@ -31,7 +31,12 @@
     if (dateFrom) dateFrom.min = todayStr;
     if (dateTo) dateTo.min = todayStr;
 
+});
 
-  });
 
-})();
+
+
+
+
+
+

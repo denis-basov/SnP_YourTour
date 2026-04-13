@@ -278,6 +278,10 @@
         max-width: 30rem;
         font-size: 1.6rem;
         gap: 1.1rem;
+
+        .nav__item:after{
+          bottom: 0;
+        }
       }
     }
 

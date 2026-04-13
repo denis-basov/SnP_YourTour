@@ -99,6 +99,10 @@
           letter-spacing: -0.8px;
         }
 
+        input[type="date"]:valid {
+          color: map.get(vars.$colors, "Black");
+        }
+
         .form-textarea {
           padding: 2rem;
           border-radius: 1rem;
@@ -137,6 +141,7 @@
         label {
           cursor: pointer;
           user-select: none;
+          color: map.get(vars.$colors, "Gray 300");
 
           .license-link {
             color: map.get(vars.$colors, "Black");
@@ -256,7 +261,7 @@
         }
 
         .checkbox-group {
-          gap: 1.7rem;
+          gap: 1rem;
         }
       }
     }
@@ -367,12 +372,18 @@
 
         .checkbox-group {
           padding-top: 0;
+          gap: 0.4rem;
+
           .form-label {
             letter-spacing: 0;
+
+            .license-link {
+              display: inline;
+            }
           }
 
           input[type="checkbox"] {
-            transform: scale(1.5) translate(2.5px, 2.5px);
+            transform: scale(0.75) translate(-3.5px, -1.5px);
             order: -1;
             margin-left: 0;
             align-self: start;

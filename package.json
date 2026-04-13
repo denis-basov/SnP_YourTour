@@ -9,5 +9,8 @@
   "devDependencies": {
     "sass": "^1.92.1",
     "vite": "^8.0.1"
+  },
+  "dependencies": {
+    "imask": "^7.6.1"
   }
 }
