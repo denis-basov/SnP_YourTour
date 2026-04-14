@@ -52,7 +52,7 @@
       <!-- <MAIN> -->
       <main>
         <!-- <SECTION TOURS> -->
-        <section class="tours">
+        <section class="tours" id="tours">
             <h2 class="tours__title h2">Выбери свой тур</h2>
 
             <nav class="tours__nav">
@@ -207,7 +207,7 @@
                 </div>
 
                 <div class="form-group button-group">
-                    <button type="submit" class="build-tour__button button p-normal">Найти тур</button>
+                    <button type="submit" onclick="document.getElementById('tours').scrollIntoView({behavior: 'smooth'}); return false;" class="build-tour__button button p-normal">Найти тур</button>
                     <button type="reset" class="build-tour__button button p-normal">Сбросить</button>
                 </div>
 
