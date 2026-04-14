@@ -11,9 +11,6 @@ dist/
 build/
 coverage/
 
-# SASS / CSS output
-styles/main.css
-
 # Editor directories and files
 .vscode/
 .idea/
