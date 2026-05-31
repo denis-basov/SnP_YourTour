@@ -1,0 +1,15 @@
+
+@media (hover: none) {
+  .nav__link:hover::after,
+  .tours .nav__list .nav__item:hover::after,
+  .tours .tours__grid .tour-card:hover .tour-card__link::before,
+  .stories .story:hover .story__more-link::before,
+  .footer__social-link .footer__social-text:hover::after {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  .tours .tours__grid .tour-card:hover,
+  .stories .story:hover {
+    box-shadow: none;
+  }
+}

@@ -66,7 +66,7 @@
       position: relative;
       z-index: 0;
       background: transparent;
-      transition: color 0.3s ease; // меняем цвет текста
+      transition: color 0.3s ease; 
 
       &::before {
         content: "";
@@ -135,26 +135,32 @@
   }
 
   .story:hover {
-    transform: scale(1.2);
+    // transform: scale(1.2);
+    cursor: pointer;
+
+    .story__more-link::before {
+      opacity: 1;
+    }
   }
+
 
   .story:nth-child(1) {
     background:
-      linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.02)), url("../images/laptop/story-image-1.png");
+      linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.02)), url("../images/desktop/story-image-1.png");
     background-size: cover;
     background-position: center;
   }
 
   .story:nth-child(2) {
     background:
-      linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.02)), url("../images/laptop/story-image-2.png");
+      linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.02)), url("../images/desktop/story-image-2.png");
     background-size: cover;
     background-position: center;
   }
 
   .story:nth-child(3) {
     background:
-      linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.02)), url("../images/laptop/story-image-3.png");
+      linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.02)), url("../images/desktop/story-image-3.png");
     background-size: cover;
     background-position: center;
   }
@@ -227,7 +233,7 @@
 
     .stories__title {
       font-size: 3.4rem;
-      letter-spacing: 2%;
+      letter-spacing: 0.68px;
       line-height: round(112%, 1px);
     }
 
@@ -246,8 +252,9 @@
 
         .story__title {
           font-size: 2.3rem;
+          font-weight: 700;
           line-height: round(120%, 1px);
-          letter-spacing: 4%;
+          letter-spacing: 0.92px;
 
           span.new-line {
             display: block;
@@ -281,7 +288,7 @@
 
           .story__more-link {
             font-size: 1.6rem;
-            line-height: round(155%, 1px);
+            line-height: 22.72px;
           }
 
           .story__socials {

@@ -56,6 +56,7 @@
 
   &__tour {
     color: map.get(vars.$colors, "Gray 300");
+    letter-spacing: -0.17px;
   }
 }
 
@@ -116,7 +117,7 @@
     .reviews__title {
       font-size: 3.4rem;
       line-height: round(112%, 1px);
-      letter-spacing: 2%;
+      letter-spacing: 0.68px;
     }
 
     .reviews__intro {
@@ -149,11 +150,13 @@
 
             .review__name {
               font-size: 2.3rem;
-              letter-spacing: 4%;
+              font-weight: 700;
+              letter-spacing: 0.92px;
             }
 
             .review__tour {
               font-size: 1.6rem;
+              letter-spacing: -0.16px;
             }
           }
         }

@@ -11,6 +11,45 @@
   color: map.get(vars.$colors, "White");
 }
 
+.header__top-fixed {
+  width: 100%;
+  max-width: 192rem;
+  margin: 0 auto;
+  background: transparent;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+  z-index: 1000;
+  position: relative;
+}
+
+.header__top-fixed--scrolled {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  right: auto;         
+  background: rgba(243, 239, 232, 0.6);
+  backdrop-filter: blur(54px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header__top-fixed--scrolled .nav__link,
+.header__top-fixed--scrolled .header__phone {
+  color: map.get(vars.$colors, "Black"); 
+}
+
+.header__top-fixed--scrolled .nav__link:hover {
+  color: map.get(vars.$colors, "Black");
+  opacity: 0.7;
+}
+
+.header__top-fixed--scrolled .nav__link::after {
+  background-color: map.get(vars.$colors, "Black"); 
+}
+
+.header__top-fixed--scrolled .header__logo {
+  filter: brightness(0); 
+}
+
 .header__top {
   display: flex;
   justify-content: space-between;
@@ -20,7 +59,6 @@
   padding: 2.8rem 0;
   width: 100%;
 }
-
 
 .header__logo {
   width: 18.2rem;
@@ -76,10 +114,14 @@
   border: 0;
   border-radius: 10px;
   transition: all 0.3s ease;
+
+  letter-spacing: -0.17px;
 }
 
 .hero__button:hover {
   background-color: map.get(vars.$colors, "Orange 200");
+  color: map.get(vars.$colors, "White");
+  cursor: pointer;
 }
 
 .hero__button:active {
@@ -149,6 +191,7 @@
     .hero__title {
       font-size: 3.4rem;
       line-height: round(112%, 1px);
+      letter-spacing: 0.68px;
     }
 
     .hero__subtitle {
@@ -164,6 +207,8 @@
     .hero__button {
       margin-top: 4rem;
       font-size: 1.6rem;
+
+      letter-spacing: -0.16px;
     }
   }
 }

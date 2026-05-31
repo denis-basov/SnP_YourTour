@@ -64,6 +64,13 @@
           outline: none;
         }
 
+        input:hover,
+        textarea:hover,
+        select:hover {
+          background-color: map.get(vars.$colors, "Beige 200");
+          outline: none;
+        }
+
         .textarea {
           margin-top: -1px;
         }
@@ -96,7 +103,14 @@
         input[type="date"] {
           color: map.get(vars.$colors, "Gray 300");
           text-transform: uppercase;
-          letter-spacing: -0.8px;
+          letter-spacing: 0px;
+
+          appearance: none;
+          -moz-appearance: none;
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+          display: none;
         }
 
         input[type="date"]:valid {
@@ -110,8 +124,36 @@
           background-color: map.get(vars.$colors, "Beige 100");
           resize: vertical;
           min-height: 5rem;
+          max-height: 50rem; 
         }
       }
+
+
+      
+      .form-group.error input,
+      .form-group.error select,
+      .form-group.error textarea {
+        border-color: #e74c3c;
+        background-color: #fff2f0;
+      }
+
+      
+      .form-group.error .checkbox-group label {
+        color: #e74c3c;
+      }
+      .form-group.error input[type="checkbox"] {
+        outline: 2px solid #e74c3c;
+      }
+
+      
+      .error-message {
+        color: #e74c3c;
+        font-size: 0.85rem;
+        margin-top: 5px;
+        display: block;
+      }
+
+
 
       .age-group {
         gap: 0.7rem;
@@ -142,6 +184,7 @@
           cursor: pointer;
           user-select: none;
           color: map.get(vars.$colors, "Gray 300");
+          letter-spacing: -0.17px;
 
           .license-link {
             color: map.get(vars.$colors, "Black");
@@ -312,7 +355,7 @@
     .build-tour__title {
       font-size: 3.4rem;
       line-height: round(112%, 1px);
-      letter-spacing: 2%;
+      letter-spacing: 0.68px;
     }
 
     .build-tour__description {
@@ -337,6 +380,10 @@
             padding: 1rem;
           }
 
+          .form-textarea{
+            font-size: 1.6rem;
+          }
+
           .direction {
             font-size: 1.6rem;
             padding: 1rem;
@@ -345,7 +392,7 @@
           }
 
           input[type="date"] {
-            letter-spacing: -0.5px;
+            letter-spacing: 0px;
             padding: 0.8rem;
           }
 
