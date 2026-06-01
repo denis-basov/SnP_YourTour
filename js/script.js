@@ -93,10 +93,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Валидация телефона через IMask
-        // IMask уже наложен, но проверяем, что введены все 10 цифр
         function isValidPhone(phoneValue) {
             const digits = phoneValue.replace(/\D/g, '');
-            // Должно быть 11 цифр (первая 7) – потому что маска +7 (000) 000-00-00
             return digits.length === 11 && digits[0] === '7';
         }
 
@@ -105,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
             let isValid = true;
 
-            // 1. Email
+            // Email
             const email = emailInput.value.trim();
             if (!email) {
                 showError(emailInput, 'Пожалуйста, введите email');
@@ -117,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 removeError(emailInput);
             }
 
-            // 2. Телефон (маска уже применена)
+            // Телефон
             const phone = phoneInput.value;
             if (!phone || phone === '+7 (   )   -  -') { // стандартная пустая маска
                 showError(phoneInput, 'Пожалуйста, введите номер телефона');
@@ -129,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 removeError(phoneInput);
             }
 
-            // 3. Согласие с договором
+            // Согласие с договором
             if (!agreementCheck.checked) {
                 showError(agreementCheck, 'Вы должны принять условия Лицензионного договора');
                 isValid = false;
@@ -137,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 removeError(agreementCheck);
             }
 
-            // 4. Возраст (если выбран "Нет")
+            // Возраст
             if (ageNo.checked) {
                 const ageGroup = ageNo.closest('.age-group');
                 showError(ageGroup, 'Для покупки тура необходимо быть старше 18 лет.');
@@ -149,12 +147,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (isValid) {
                 // Здесь можно отправить форму
-                // form.submit();
-                alert('Форма успешно отправлена!'); // демонстрация
+                alert('Форма успешно отправлена!');
             }
         }
 
-        // Навешиваем обработчик на кнопку "Найти тур"
+        // Навешиваем обработчик на кнопку Найти тур
         const submitBtn = form.querySelector('button[type="submit"]');
         submitBtn.addEventListener('click', validateForm);
 
@@ -167,7 +164,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         ageNo.addEventListener('change', () => {
             if (ageNo.checked) {
-                // Не показываем ошибку сразу, только при попытке отправки
                 removeError(ageNo.closest('.age-group'));
             }
         });
@@ -188,7 +184,6 @@ document.addEventListener('DOMContentLoaded', function() {
         function checkScroll() {
             if (window.scrollY > scrollThreshold) {
             if (!wrapper.classList.contains('header__top-fixed--scrolled')) {
-                // Запоминаем высоту внутреннего блока, чтобы компенсировать скачок
                 const innerHeight = document.querySelector('.header__top').offsetHeight;
                 header.style.paddingTop = innerHeight + 'px';
                 wrapper.classList.add('header__top-fixed--scrolled');

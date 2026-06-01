@@ -62,54 +62,76 @@
     margin-top: 10.6rem;
 
     .tour-card {
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-      background-position: center;
+      position: relative;
       border-radius: 5rem;
       aspect-ratio: 370 / 531;
+      overflow: hidden;
       color: map.get(vars.$colors, "White");
 
-      transition: transform 0.3s ease;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: transform 0.3s ease;
+        z-index: 0;
+      }
 
-      &:nth-child(1) {
-        background-image:
-          linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)),
-          url("../images/desktop/tour-1.png");
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.4),
+          rgba(0, 0, 0, 0.06),
+          rgba(0, 0, 0, 0.5)
+        );
+        z-index: 1;
+        pointer-events: none;
       }
-      &:nth-child(2) {
-        background-image:
-          linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)),
-          url("../images/desktop/tour-2.png");
+
+      &:hover::before {
+        transform: scale(1.2);
       }
-      &:nth-child(3) {
-        background-image:
-          linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)),
-          url("../images/desktop/tour-3.png");
+
+      &:nth-child(1)::before {
+        background-image: url("../images/desktop/tour-1.png");
       }
-      &:nth-child(4) {
-        background-image:
-          linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)),
-          url("../images/desktop/tour-4.png");
+      &:nth-child(2)::before {
+        background-image: url("../images/desktop/tour-2.png");
       }
-      &:nth-child(5) {
-        background-image:
-          linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)),
-          url("../images/desktop/tour-5.png");
+      &:nth-child(3)::before {
+        background-image: url("../images/desktop/tour-3.png");
       }
-      &:nth-child(6) {
-        background-image:
-          linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)),
-          url("../images/desktop/tour-6.png");
+      &:nth-child(4)::before {
+        background-image: url("../images/desktop/tour-4.png");
+      }
+      &:nth-child(5)::before {
+        background-image: url("../images/desktop/tour-5.png");
+      }
+      &:nth-child(6)::before {
+        background-image: url("../images/desktop/tour-6.png");
       }
 
       .tour-card__overlay {
+        position: relative;
+        z-index: 2;
         display: flex;
         flex-direction: column;
         height: 100%;
         padding: 5rem;
         gap: 1.6rem;
 
-        .tour-card__price{
+        .tour-card__price {
           letter-spacing: -0.17px;
         }
 
@@ -118,54 +140,49 @@
           display: inline-flex;
           align-items: center;
           gap: 1.5rem;
-
           position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: -7px;
+            left: -20px;
+            right: 90px;
+            bottom: -7px;
+            background: map.get(vars.$colors, "Green 400");
+            border-radius: 5rem;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+          }
+
+          &:hover::before {
+            opacity: 1;
+          }
+
+          &:active::before {
+            background: map.get(vars.$colors, "Orange 200");
+            opacity: 1;
+          }
         }
+      }
+
+      &:hover {
+        cursor: pointer;
 
         .tour-card__link::before {
-          content: "";
-          position: absolute;
-          top: -7px;
-          left: -20px;
-          right: 90px;
-          bottom: -7px;
-          background: map.get(vars.$colors, "Green 400");
-          border-radius: 5rem;
-          z-index: -1;
-          opacity: 0;
-          transition: opacity 0.3s ease;
-          pointer-events: none;
-        }
-
-        .tour-card__link:hover::before {
-          opacity: 1;
-        }
-
-        .tour-card__link:active::before {
-          background: map.get(vars.$colors, "Orange 200");
           opacity: 1;
         }
       }
     }
-
-    .tour-card:hover {
-      transform: scale(1);
-      cursor: pointer;
-
-      .tour-card__link::before {
-        opacity: 1;
-      }
-    }
-
-
   }
 }
 
 @media (max-width: 1024px) {
   .tours {
-
     .tours__title {
-        margin-top: 2.5px;
+      margin-top: 2.5px;
     }
     .tours__nav {
       margin-top: 3.5rem;
@@ -187,40 +204,23 @@
           display: none;
         }
 
-        &:nth-child(1) {
-          background-image:
-            linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)),
-            url("../images/laptop/tour-1.png");
+        &:nth-child(1)::before {
+          background-image: url("../images/laptop/tour-1.png");
         }
-
-        &:nth-child(2) {
-          background-image:
-            linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)),
-            url("../images/laptop/tour-2.png");
+        &:nth-child(2)::before {
+          background-image: url("../images/laptop/tour-2.png");
         }
-
-        &:nth-child(3) {
-          background-image:
-            linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)),
-            url("../images/laptop/tour-3.png");
+        &:nth-child(3)::before {
+          background-image: url("../images/laptop/tour-3.png");
         }
-
-        &:nth-child(4) {
-          background-image:
-            linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)),
-            url("../images/laptop/tour-4.png");
+        &:nth-child(4)::before {
+          background-image: url("../images/laptop/tour-4.png");
         }
-
-        &:nth-child(5) {
-          background-image:
-            linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)),
-            url("../images/laptop/tour-5.png");
+        &:nth-child(5)::before {
+          background-image: url("../images/laptop/tour-5.png");
         }
-
-        &:nth-child(6) {
-          background-image:
-            linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)),
-            url("../images/laptop/tour-6.png");
+        &:nth-child(6)::before {
+          background-image: url("../images/laptop/tour-6.png");
         }
       }
     }
@@ -240,7 +240,6 @@
     }
 
     .tours__grid {
-      // grid-template-columns: 1fr;
       max-width: 70rem;
       margin: 7rem auto 0;
 
@@ -297,12 +296,11 @@
         font-size: 1.6rem;
         gap: 1.1rem;
 
-
-        .nav__item{
+        .nav__item {
           line-height: 22.72px;
         }
 
-        .nav__item:after{
+        .nav__item:after {
           bottom: 0;
         }
       }
@@ -317,40 +315,23 @@
         border-radius: 2rem;
         aspect-ratio: 1;
 
-        &:nth-child(1) {
-          background-image:
-            linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)),
-            url("../images/mobile/tour-1.png");
+        &:nth-child(1)::before {
+          background-image: url("../images/mobile/tour-1.png");
         }
-
-        &:nth-child(2) {
-          background-image:
-            linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)),
-            url("../images/mobile/tour-2.png");
+        &:nth-child(2)::before {
+          background-image: url("../images/mobile/tour-2.png");
         }
-
-        &:nth-child(3) {
-          background-image:
-            linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)),
-            url("../images/mobile/tour-3.png");
+        &:nth-child(3)::before {
+          background-image: url("../images/mobile/tour-3.png");
         }
-
-        &:nth-child(4) {
-          background-image:
-            linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)),
-            url("../images/mobile/tour-4.png");
+        &:nth-child(4)::before {
+          background-image: url("../images/mobile/tour-4.png");
         }
-
-        &:nth-child(5) {
-          background-image:
-            linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)),
-            url("../images/mobile/tour-5.png");
+        &:nth-child(5)::before {
+          background-image: url("../images/mobile/tour-5.png");
         }
-
-        &:nth-child(6) {
-          background-image:
-            linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)),
-            url("../images/mobile/tour-6.png");
+        &:nth-child(6)::before {
+          background-image: url("../images/mobile/tour-6.png");
         }
 
         .tour-card__overlay {
@@ -376,5 +357,15 @@
         }
       }
     }
+  }
+}
+
+
+@media (hover: none) {
+  .tour-card:hover::before {
+    transform: scale(1);
+  }
+  .tour-card:hover .tour-card__link::before {
+    opacity: 0;
   }
 }
