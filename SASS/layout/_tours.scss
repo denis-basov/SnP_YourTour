@@ -20,7 +20,9 @@
   }
 
   .nav__list {
-    gap: 3rem;
+    gap: 30.6px;
+    width: 700px;
+    max-width: 700px;
 
     .nav__item {
       position: relative;
@@ -115,7 +117,7 @@
           margin-top: auto;
           display: inline-flex;
           align-items: center;
-          gap: 1.6rem;
+          gap: 1.5rem;
 
           position: relative;
         }
@@ -161,10 +163,14 @@
 
 @media (max-width: 1024px) {
   .tours {
+
+    .tours__title {
+        margin-top: 2.5px;
+    }
     .tours__nav {
-      margin-top: 3.7rem;
+      margin-top: 3.5rem;
       .nav__list {
-        gap: 3.1rem;
+        gap: 30.5px;
       }
     }
 
@@ -278,9 +284,9 @@
 
     .tours__title {
       font-size: 3.4rem;
-      letter-spacing: 2%;
       line-height: round(112%, 1px);
       letter-spacing: 0.68px;
+      margin-top: 2px;
     }
 
     .tours__nav {
@@ -303,7 +309,7 @@
     }
 
     .tours__grid {
-      margin-top: 4.8rem;
+      margin-top: 4.9rem;
       padding: 0;
       max-width: 31.8rem;
 
@@ -349,7 +355,7 @@
 
         .tour-card__overlay {
           padding: 2.5rem;
-          gap: 1.2rem;
+          gap: 1.5rem;
 
           .tour-card__title {
             font-size: 2.3rem;

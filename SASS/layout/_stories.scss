@@ -97,7 +97,7 @@
 
     &__socials {
       display: flex;
-      gap: 3.5rem;
+      gap: 35.5px;
 
       .story__social-link {
         position: relative;
@@ -179,6 +179,8 @@
     .story {
       aspect-ratio: 918/567;
 
+
+
       &__feature-item {
         margin-top: -1px;
       }
@@ -186,6 +188,18 @@
       &__socials {
         gap: 3.6rem;
       }
+    }
+
+    .story:nth-child(1) {
+      background-image: url("../images/laptop/story-image-1.png");
+    }
+
+    .story:nth-child(2) {
+      background-image: url("../images/laptop/story-image-2.png");
+    }
+
+    .story:nth-child(3) {
+      background-image: url("../images/laptop/story-image-3.png");
     }
   }
 }
@@ -289,6 +303,7 @@
           .story__more-link {
             font-size: 1.6rem;
             line-height: 22.72px;
+            align-items: center;
           }
 
           .story__socials {

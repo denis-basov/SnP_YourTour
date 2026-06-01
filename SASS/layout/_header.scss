@@ -98,7 +98,8 @@
 }
 
 .hero__title {
-  padding-left: 3px;
+  margin-left: 2px;
+  margin-top: -0.5px;
 }
 
 .hero__subtitle {
@@ -135,6 +136,8 @@
 
   .hero__title {
     padding-left: 0px;
+    margin-left: 0;
+    margin-top: 0;
   }
 
   .hero__subtitle {
@@ -192,12 +195,13 @@
       font-size: 3.4rem;
       line-height: round(112%, 1px);
       letter-spacing: 0.68px;
+      margin-top: 1px;
     }
 
     .hero__subtitle {
       max-width: 31rem;
       font-size: 1.6rem;
-      margin: 4rem auto 0;
+      margin: 3.9rem auto 0;
 
       .hero__comma {
         display: inline;

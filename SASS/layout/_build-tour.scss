@@ -30,7 +30,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 3rem;
-      row-gap: 3.2rem;
+      row-gap: 3.19rem;
 
       :nth-child(7),
       :nth-child(8),
@@ -92,7 +92,7 @@
           appearance: none;
           background-image: url("../images/icons/ic-dropdown.svg");
           background-repeat: no-repeat;
-          background-position: right 2.1rem center;
+          background-position: right 1.9rem center;
           background-size: 2.6rem;
         }
 
@@ -103,8 +103,8 @@
         input[type="date"] {
           color: map.get(vars.$colors, "Gray 300");
           text-transform: uppercase;
-          letter-spacing: 0px;
-
+          letter-spacing: -0.5px;
+          padding-left: 1.8rem;
           appearance: none;
           -moz-appearance: none;
         }
@@ -190,6 +190,8 @@
             color: map.get(vars.$colors, "Black");
             text-decoration: none;
             position: relative;
+            left: -1px;
+            top: 1px;
             display: inline-block;
             transition: color 0.3s ease;
 
@@ -259,7 +261,7 @@
 
         .build-tour__button {
           border-radius: 1rem;
-          padding: 1.5rem 7.05rem;
+          padding: 1.5rem 7.1rem;
           font-weight: 400;
           background-color: map.get(vars.$colors, "Green 400");
         }
@@ -298,10 +300,19 @@
 
       .form-grid {
         column-gap: 2rem;
+        row-gap: 32px;
 
-        .form-group .textarea {
-          margin-top: -2px;
-        }
+        .form-group{
+          .textarea {
+            margin-top: -2px;
+          }
+
+          label .license-link{
+            left: 1px;
+          }
+        } 
+        
+
 
         .checkbox-group {
           gap: 1rem;
@@ -382,6 +393,7 @@
 
           .form-textarea{
             font-size: 1.6rem;
+            min-height: 132px;
           }
 
           .direction {
@@ -426,6 +438,8 @@
 
             .license-link {
               display: inline;
+              left: 0px;
+              top: 1px;
             }
           }
 

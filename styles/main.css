@@ -291,7 +291,8 @@ main {
 }
 
 .hero__title {
-  padding-left: 3px;
+  margin-left: 2px;
+  margin-top: -0.5px;
 }
 
 .hero__subtitle {
@@ -326,6 +327,8 @@ main {
   }
   .hero__title {
     padding-left: 0px;
+    margin-left: 0;
+    margin-top: 0;
   }
   .hero__subtitle {
     max-width: 40rem;
@@ -372,11 +375,12 @@ main {
     font-size: 3.4rem;
     line-height: round(112%, 1px);
     letter-spacing: 0.68px;
+    margin-top: 1px;
   }
   .header .header__hero .hero__subtitle {
     max-width: 31rem;
     font-size: 1.6rem;
-    margin: 4rem auto 0;
+    margin: 3.9rem auto 0;
   }
   .header .header__hero .hero__subtitle .hero__comma {
     display: inline;
@@ -404,7 +408,9 @@ main {
   margin-top: 3.5rem;
 }
 .tours .nav__list {
-  gap: 3rem;
+  gap: 30.6px;
+  width: 700px;
+  max-width: 700px;
 }
 .tours .nav__list .nav__item {
   position: relative;
@@ -478,7 +484,7 @@ main {
   margin-top: auto;
   display: inline-flex;
   align-items: center;
-  gap: 1.6rem;
+  gap: 1.5rem;
   position: relative;
 }
 .tours .tours__grid .tour-card .tour-card__overlay .tour-card__link::before {
@@ -511,11 +517,14 @@ main {
 }
 
 @media (max-width: 1024px) {
+  .tours .tours__title {
+    margin-top: 2.5px;
+  }
   .tours .tours__nav {
-    margin-top: 3.7rem;
+    margin-top: 3.5rem;
   }
   .tours .tours__nav .nav__list {
-    gap: 3.1rem;
+    gap: 30.5px;
   }
   .tours .tours__grid {
     grid-template-columns: repeat(2, 1fr);
@@ -592,9 +601,9 @@ main {
   }
   .tours .tours__title {
     font-size: 3.4rem;
-    letter-spacing: 2%;
     line-height: round(112%, 1px);
     letter-spacing: 0.68px;
+    margin-top: 2px;
   }
   .tours .tours__nav {
     margin-top: 3rem;
@@ -611,7 +620,7 @@ main {
     bottom: 0;
   }
   .tours .tours__grid {
-    margin-top: 4.8rem;
+    margin-top: 4.9rem;
     padding: 0;
     max-width: 31.8rem;
   }
@@ -639,7 +648,7 @@ main {
   }
   .tours .tours__grid .tour-card .tour-card__overlay {
     padding: 2.5rem;
-    gap: 1.2rem;
+    gap: 1.5rem;
   }
   .tours .tours__grid .tour-card .tour-card__overlay .tour-card__title {
     font-size: 2.3rem;
@@ -682,7 +691,7 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 3rem;
-  row-gap: 3.2rem;
+  row-gap: 3.19rem;
 }
 .build-tour .build-tour__form .form-grid :nth-child(7),
 .build-tour .build-tour__form .form-grid :nth-child(8),
@@ -735,7 +744,7 @@ main {
   appearance: none;
   background-image: url("../images/icons/ic-dropdown.svg");
   background-repeat: no-repeat;
-  background-position: right 2.1rem center;
+  background-position: right 1.9rem center;
   background-size: 2.6rem;
 }
 .build-tour .build-tour__form .form-grid .form-group .direction:valid {
@@ -744,7 +753,8 @@ main {
 .build-tour .build-tour__form .form-grid .form-group input[type=date] {
   color: #a6a6a6;
   text-transform: uppercase;
-  letter-spacing: 0px;
+  letter-spacing: -0.5px;
+  padding-left: 1.8rem;
   appearance: none;
   -moz-appearance: none;
 }
@@ -812,6 +822,8 @@ main {
   color: #1b1f2b;
   text-decoration: none;
   position: relative;
+  left: -1px;
+  top: 1px;
   display: inline-block;
   transition: color 0.3s ease;
 }
@@ -870,7 +882,7 @@ main {
 }
 .build-tour .build-tour__form .form-grid .button-group .build-tour__button {
   border-radius: 1rem;
-  padding: 1.5rem 7.05rem;
+  padding: 1.5rem 7.1rem;
   font-weight: 400;
   background-color: #286562;
 }
@@ -901,9 +913,13 @@ main {
   }
   .build-tour .build-tour__form .form-grid {
     column-gap: 2rem;
+    row-gap: 32px;
   }
   .build-tour .build-tour__form .form-grid .form-group .textarea {
     margin-top: -2px;
+  }
+  .build-tour .build-tour__form .form-grid .form-group label .license-link {
+    left: 1px;
   }
   .build-tour .build-tour__form .form-grid .checkbox-group {
     gap: 1rem;
@@ -967,6 +983,7 @@ main {
   }
   .build-tour .build-tour__form .form-grid .form-group .form-textarea {
     font-size: 1.6rem;
+    min-height: 132px;
   }
   .build-tour .build-tour__form .form-grid .form-group .direction {
     font-size: 1.6rem;
@@ -1000,6 +1017,8 @@ main {
   }
   .build-tour .build-tour__form .form-grid .checkbox-group .form-label .license-link {
     display: inline;
+    left: 0px;
+    top: 1px;
   }
   .build-tour .build-tour__form .form-grid .checkbox-group input[type=checkbox] {
     transform: scale(0.75) translate(-3.5px, -1.5px);
@@ -1054,7 +1073,7 @@ main {
 }
 .review__text {
   display: grid;
-  row-gap: 2.7rem;
+  row-gap: 2.8rem;
   margin-bottom: 7rem;
 }
 .review__footer {
@@ -1451,7 +1470,7 @@ main {
 }
 .stories .story__socials {
   display: flex;
-  gap: 3.5rem;
+  gap: 35.5px;
 }
 .stories .story__socials .story__social-link {
   position: relative;
@@ -1520,6 +1539,15 @@ main {
   }
   .stories .story__socials {
     gap: 3.6rem;
+  }
+  .stories .story:nth-child(1) {
+    background-image: url("../images/laptop/story-image-1.png");
+  }
+  .stories .story:nth-child(2) {
+    background-image: url("../images/laptop/story-image-2.png");
+  }
+  .stories .story:nth-child(3) {
+    background-image: url("../images/laptop/story-image-3.png");
   }
 }
 @media (max-width: 800px) {
@@ -1605,6 +1633,7 @@ main {
   .stories .stories__list .story .story__footer .story__more-link {
     font-size: 1.6rem;
     line-height: 22.72px;
+    align-items: center;
   }
   .stories .stories__list .story .story__footer .story__socials {
     display: none;
@@ -1805,3 +1834,5 @@ main {
     box-shadow: none;
   }
 }
+
+/*# sourceMappingURL=main.css.map */
